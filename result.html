@@ -1,0 +1,63 @@
+
+<!doctype html>
+<html>
+  <head>
+    <title>LocalorExpress</title>
+    <meta name="description" content="Should I take the express or local train?">
+    <link rel= "stylesheet" type= "text/css" href= "./static/styles/layout2.css">
+  </head>
+
+
+
+
+<div class="img_holder" a href="http://www.localorexpress.com"><img src="./static/img/train.png" alt="FASTTRACK_Logo" class="img_size1"/></a></div>
+
+
+
+<h1>LocalORExpress.com</h1>
+<h4>Communte Smarter</h4>
+<h2><a href="http://www.localorexpress.com">Should you take the local or wait for the express train?</a></h2>
+
+
+
+<form method="POST" action="#">
+
+    {% if result %}
+
+    <div class="result" location="#result">
+    <br></br>
+    <br></br>
+        <h3>Results</h3>
+        <div class="difference">
+            <p> <label name='result'>Take the <strong><u>local</u></strong> if the express is more than <strong> <u>{{ result }} </u></strong> minutes away</label> </p>
+        </div> <!-- difference!-->
+
+        <span class="express">
+            <p> <label name='express'>Express total time: {{ express }} minutes</label> </p>
+        <span class="local">
+            <p> <label name='local'>Local total time: {{ local }} minutes</label> </p>
+    <h3> </h3>
+    <br></br>
+    <br></br>
+
+    </div> <!-- result !-->
+
+    {% endif %}
+    {% if error %}
+    <p>
+    <label name="error">{{ error }}</label>
+    </p>
+    {% endif %}
+
+
+    <br></br>
+    <br></br>
+    <br></br>
+
+
+    <footer>
+      &copy; crnsy inc
+    </footer>
+  </body>
+</html>
+
